@@ -7,3 +7,6 @@ c:\users\tester\documents\visual studio 2013\Projects\StringEncoder\StringEncode
 C:\Users\tester\Documents\GitHub\String-Encoder-Decoder\StringEncoder\bin\Debug\StringEncoder.exe.config
 C:\Users\tester\Documents\GitHub\String-Encoder-Decoder\StringEncoder\obj\Debug\StringEncoder.exe
 C:\Users\tester\Documents\GitHub\String-Encoder-Decoder\StringEncoder\obj\Debug\StringEncoder.pdb
+C:\Users\tester\Documents\GitHub\String-Encoder-Decoder\StringEncoder\bin\Debug\StringEncoder.exe
+C:\Users\tester\Documents\GitHub\String-Encoder-Decoder\StringEncoder\bin\Debug\StringEncoder.pdb
+C:\Users\tester\Documents\GitHub\String-Encoder-Decoder\StringEncoder\obj\Debug\StringEncoder.csprojResolveAssemblyReference.cache

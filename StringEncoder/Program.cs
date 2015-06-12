@@ -13,34 +13,50 @@ namespace StringEncoder
     {
         static void Main(string[] args)
         {
-            Console.Write("Please enter a string: ");
-            string test = Console.ReadLine();
-            string encoded = "";
-            string decoded = "";
-
-            test = test.ToLower();
-
-            Console.WriteLine("Original string: " + test);
-
-            foreach (char c in test)
+            bool KeepGoing = true;
+            while (KeepGoing)
             {
-                foreach (KeyValuePair<char, char> letter in codes)
+                Console.WriteLine();
+                Console.WriteLine("Do you want to encode or decode?");
+                Console.WriteLine("Type 'e' for encode or 'd' for decode:");
+                string encodeDecode = Console.ReadLine();
+                if (encodeDecode == "e")
                 {
-                    if (letter.Key == c)
-                        encoded += letter.Value;
-                }
-            }
-            Console.WriteLine("Encoded string:  " + encoded);
+                    Console.Write("Please enter a string to encode: ");
+                    string entry = Console.ReadLine();
+                    string encoded = "";
 
-            foreach (char c in encoded)
-            {
-                foreach (KeyValuePair<char, char> letter in codes)
-                {
-                    if (letter.Value == c)
-                        decoded += letter.Key;
+                    entry = entry.ToLower();
+
+                    foreach (char c in entry)
+                    {
+                        foreach (KeyValuePair<char, char> letter in codes)
+                        {
+                            if (letter.Key == c)
+                                encoded += letter.Value;
+                        }
+                    }
+                    Console.WriteLine("Encoded string:  " + encoded);
                 }
+                else if (encodeDecode == "d")
+                {
+                    Console.Write("Please enter a string to decode: ");
+                    string entry = Console.ReadLine();
+                    string decoded = "";
+
+                    foreach (char c in entry)
+                    {
+                        foreach (KeyValuePair<char, char> letter in codes)
+                        {
+                            if (letter.Value == c)
+                                decoded += letter.Key;
+                        }
+                    }
+                    Console.WriteLine("Decoded string:  " + decoded);
+                }
+                else
+                    Console.WriteLine("Please enter 'e' or 'd'");
             }
-            Console.WriteLine("Decoded string:  " + decoded);
         }
         public static Dictionary<char, char> codes = new Dictionary<char, char>()
         {
